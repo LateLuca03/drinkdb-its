@@ -1,0 +1,30 @@
+<div class="bg-container p-3">
+    
+    <div class="d-flex justify-content-center t-drink">
+        <h1>Welcome to DrinkDB</h1>
+    </div>
+    
+    <div class="row d-flex justify-content-center">
+        <div class="card bg-drink m-2" *ngFor="let drink of drinks; let i = index" style=" width: 18rem;">
+            <img [src]="drink.strDrinkThumb" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title t-drink">{{drink.strDrink}}</h5>
+                <div class="accordion accordion-success mb-3" [ngClass]="'item-'+ i">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" (click)="drink.isOpen = !drink.isOpen">
+                                Come si fa?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse" [class.show] = "drink.isOpen">
+                            <div class="accordion-body">
+                                {{drink.strInstructions}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-orange w-100" routerLink="/detail/drink">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>

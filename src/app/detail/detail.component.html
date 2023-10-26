@@ -1,0 +1,72 @@
+<div class="bg-container p-3" *ngIf="detailDrink">
+    
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#" router-link="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">{{detailDrink.strDrink}}</li>
+        </ol>
+    </nav>
+
+    <div class="row">
+        <div class="col-4">
+            <h1 class="t-drink font-24">{{detailDrink.strDrink}}</h1>
+            <img [src]="detailDrink.strDrinkThumb" alt="immagine del cocktail" class="w-75 mt-3">
+        </div>
+        <div class="col-4 t-drink">
+            <h2 class=" font-24">Ingredients</h2>
+            <ul class="mt-2 font-20">
+                    <li *ngIf="detailDrink.strIngredient1 != null">
+                        {{detailDrink.strIngredient1}}
+                    </li>
+                    <li *ngIf="detailDrink.strIngredient2 != null">
+                        {{detailDrink.strIngredient2}}
+                    </li>
+                    <li *ngIf="detailDrink.strIngredient3 != null">
+                        {{detailDrink.strIngredient3}}
+                    </li>
+                    <li *ngIf="detailDrink.strIngredient4 != null">
+                        {{detailDrink.strIngredient4}}
+                    </li>
+                    <li *ngIf="detailDrink.strIngredient5 != null">
+                        {{detailDrink.strIngredient5}}
+                    </li>
+                    <li *ngIf="detailDrink.strIngredient6 != null">
+                        {{detailDrink.strIngredient6}}
+                    </li>
+                    <li *ngIf="detailDrink.strIngredient7 != null">
+                        {{detailDrink.strIngredient7}}
+                    </li>
+                    <li *ngIf="detailDrink.strIngredient8 != null">
+                        {{detailDrink.strIngredient8}}
+                    </li>
+                    <li *ngIf="detailDrink.strIngredient9 != null">
+                        {{detailDrink.strIngredient9}}
+                    </li>
+                    <li *ngIf="detailDrink.strIngredient10 != null">
+                        {{detailDrink.strIngredient10}}
+                    </li>
+                    <li *ngIf="detailDrink.strIngredient11 != null">
+                        {{detailDrink.strIngredient11}}
+                    </li>
+                    <li *ngIf="detailDrink.strIngredient12 != null">
+                        {{detailDrink.strIngredient12}}
+                    </li>
+                    <li *ngIf="detailDrink.strIngredient13 != null">
+                        {{detailDrink.strIngredient13}}
+                    </li>
+                    <li *ngIf="detailDrink.strIngredient14 != null">
+                        {{detailDrink.strIngredient14}}
+                    </li>
+                    <li *ngIf="detailDrink.strIngredient15 != null">
+                        {{detailDrink.strIngredient15}}
+                    </li>
+
+            </ul>
+        </div>
+        <div class="col-4 t-drink font-24">
+            <h2>Instructions</h2>
+            <p class="font-20">{{detailDrink.strInstructions}}</p>
+        </div>
+    </div>
+
+</div>
