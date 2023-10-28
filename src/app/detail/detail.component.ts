@@ -11,8 +11,24 @@ export class DetailComponent implements OnInit {
     detailDrink!: Drink;
     error: string = "error";
     ingredients: string = "";
+    lingue: string = ""
 
     constructor(private http: HttpClient) {}
+
+    cambiaLingua(lang: string){
+
+        if(lang){
+
+            this.lingue = lang;
+
+        }else if(lang === "null"){
+
+            this.lingue = 'error';
+
+        }
+        
+
+    }
 
     ngOnInit(): void {
         // una get verso un indirizzo che da una risposta
