@@ -193,9 +193,13 @@ app-top-bar h1 {
 }
 
 .btn{
+    color: black;
+}
+
+.btn:disabled{
 
     color: black;
-    --bs-btn-hover-border-color: 1px solid #f6672f;
+    background-color: #9f5233;
 
 }
 
